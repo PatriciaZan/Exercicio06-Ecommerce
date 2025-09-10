@@ -17,6 +17,7 @@ import {
   Route,
   BrowserRouter,
 } from "react-router-dom";
+import AboutUs from "./pages/AboutUs.jsx";
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
@@ -27,6 +28,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
+          <Route path="/aboutus" element={<AboutUs />} />
         </Route>
       </Routes>
     </BrowserRouter>

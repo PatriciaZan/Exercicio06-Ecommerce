@@ -21,7 +21,7 @@ export default function NavBar() {
         <ul>
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
-          <Link to="/about">About us</Link>
+          <Link to="/aboutus">About us</Link>
           <Link to="/cart">Cart</Link>
           <div>
             <span>cart</span>

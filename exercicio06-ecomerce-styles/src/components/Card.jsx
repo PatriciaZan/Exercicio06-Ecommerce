@@ -20,6 +20,7 @@ export default function Card({ data }) {
   };
 
   const dispatch = useDispatch();
+
   const handleAddToCart = () => {
     dispatch(
       addToCart({
