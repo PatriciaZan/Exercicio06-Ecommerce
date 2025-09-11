@@ -1,0 +1,17 @@
+/* ABOUT */
+
+.about-container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart-container {
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
