@@ -27,6 +27,8 @@ export default function NavBar() {
             <span>cart</span>
             <span>{totalQuantity}</span>
           </div>
+
+          <div></div>
         </ul>
       </nav>
     </div>

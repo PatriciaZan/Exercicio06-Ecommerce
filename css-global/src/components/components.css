@@ -8,9 +8,6 @@
   padding: 20px;
 }
 
-.navBar-container nav {
-}
-
 .navBar-container ul {
   display: flex;
   align-items: center;

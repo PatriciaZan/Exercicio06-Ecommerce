@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 import "../components/components.css";
 
-export default function NavBar() {
+export default function NavBar({ toggle }) {
   const [totalQuantity, setTotalQuantity] = useState(0);
   const carts = useSelector((store) => store.cart.items);
 
@@ -27,6 +27,10 @@ export default function NavBar() {
           <div>
             <Link to="/cart">Cart</Link>
             <span className="navBar-cart-span">{totalQuantity}</span>
+          </div>
+
+          <div>
+            <button onClick={toggle}>toggle</button>
           </div>
         </ul>
       </nav>
