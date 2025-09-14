@@ -5,6 +5,14 @@
   background-color: var(--clr-background);
 }
 
+#light {
+  background-color: var(--clr-background);
+}
+
+#dark {
+  background-color: black;
+}
+
 .home-title {
   color: var(--clr-text-primary);
 }

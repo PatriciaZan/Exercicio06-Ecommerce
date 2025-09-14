@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Card from "../components/Card";
+import LazyloadindProducts from "../components/LazyloadindProducts";
 
 //import data from "../../src/data/Data.json";
 
@@ -8,6 +9,8 @@ export default function Products() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  let dataLenght = 0;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +22,11 @@ export default function Products() {
         const result = await response.json();
         const data = result.products;
         setData(data);
+
+        dataLenght = data.length;
+
         console.log("RESULT: ", data);
+        console.log("LENGHT: ", dataLenght);
       } catch (err) {
         setError(err);
       } finally {
@@ -33,7 +40,7 @@ export default function Products() {
   if (loading)
     return (
       <div className="products-container">
-        <p>Loading data...</p>
+        <LazyloadindProducts products={dataLenght} />
       </div>
     );
 

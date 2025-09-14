@@ -8,6 +8,11 @@
   padding: 20px;
 }
 
+#dark .navBar-container {
+  background-color: black;
+  color: white;
+}
+
 .navBar-container ul {
   display: flex;
   align-items: center;

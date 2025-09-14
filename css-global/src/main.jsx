@@ -1,12 +1,18 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import React, { Suspense } from "react";
 import "./index.css";
 import App from "./App.jsx";
 
-import Cart from "./pages/Cart.jsx";
-import Home from "./pages/Home.jsx";
-import Products from "./pages/Products.jsx";
-import About from "./pages/About.jsx";
+//import Cart from "./pages/Cart.jsx";
+//import Home from "./pages/Home.jsx";
+//import Products from "./pages/Products.jsx";
+//import About from "./pages/About.jsx";
+
+const Cart = React.lazy(() => import("./pages/Cart.jsx"));
+const Home = React.lazy(() => import("./pages/Home.jsx"));
+const Products = React.lazy(() => import("./pages/Products.jsx"));
+const About = React.lazy(() => import("./pages/About.jsx"));
 
 import { Provider } from "react-redux";
 import { store } from "./stores";
@@ -18,19 +24,23 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import AboutUs from "./pages/AboutUs.jsx";
+import LazyloadindProducts from "./components/LazyloadindProducts.jsx";
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<Home />} />
+
+            <Route path="/products" element={<Products />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   </Provider>
 );

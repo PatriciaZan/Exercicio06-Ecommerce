@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
-export default function NavBar() {
+export default function NavBar({ toggle }) {
   const [totalQuantity, setTotalQuantity] = useState(0);
   const carts = useSelector((store) => store.cart.items);
 
@@ -28,7 +28,9 @@ export default function NavBar() {
             <span>{totalQuantity}</span>
           </div>
 
-          <div></div>
+          <div>
+            <button onClick={toggle}>Toggle</button>
+          </div>
         </ul>
       </nav>
     </div>

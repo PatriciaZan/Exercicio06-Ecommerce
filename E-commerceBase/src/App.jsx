@@ -14,7 +14,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id={theme}>
+      <div className="app" id={theme}>
         <NavBar toggle={toggleTheme} />
         <Outlet />
       </div>
