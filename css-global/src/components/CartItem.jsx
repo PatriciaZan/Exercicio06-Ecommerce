@@ -43,14 +43,16 @@ export default function CartItem(props) {
   return (
     <div className="cartItem-container">
       Cart Item
-      <img src={detail.image} alt={detail.image} />
+      <img className="cart-img" src={detail.imageUrl} alt={detail.image} />
       <p>{detail.name}</p>
-      <p>Price {detail.price * quantity}</p>
+      <p>Star Quantity {quantity}</p>
+      <p>Aproximated Price {detail.price * quantity}</p>
       <div className="cartItem-btns">
         <button onClick={handleReduceQuantity}>-</button>
         <span>{quantity}</span>
         <button onClick={handleIncreaseQuantity}>+</button>
       </div>
+      <p>Your request will be recived by our team after confirmation.</p>
     </div>
   );
 }

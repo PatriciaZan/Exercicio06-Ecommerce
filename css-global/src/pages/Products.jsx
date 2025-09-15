@@ -53,7 +53,13 @@ export default function Products() {
 
   return (
     <div className="products-container">
-      <h1>Our products</h1>
+      <div className="products-header">
+        <h1>Our Stars and Suns </h1>
+        <p>
+          The best available sales right now. Make a reservation or contact our
+          selesman team for a personalized visit.
+        </p>
+      </div>
 
       <div className="products-grid">
         {data.map((item) => (

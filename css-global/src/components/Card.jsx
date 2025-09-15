@@ -32,11 +32,18 @@ export default function Card({ data }) {
 
   return (
     <div className="card-container">
-      <h1>{data.name}</h1>
-      <img src={data.image} alt={data.image} />
-      <p>{data.about}</p>
-      <button onClick={handleAbout}>About</button>
-      <button onClick={handleAddToCart}>Add Cart</button>
+      <div className="card-tag">
+        <span>{data.status}</span>
+        <div className="card-content">
+          <h1>{data.name}</h1>
+          <img className="card-image" src={data.imageUrl} alt={data.name} />
+          <p>{data.about}</p>
+          <div>
+            <button onClick={handleAbout}>Know more</button>
+            <button onClick={handleAddToCart}>Add Cart</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

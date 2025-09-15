@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
+import logo from "../assets/LOGOsvg.svg";
 
 import "../components/components.css";
 
@@ -17,13 +18,13 @@ export default function NavBar({ toggle }) {
 
   return (
     <div className="navBar-container">
-      <span>NavBar</span>
+      <img src={logo} alt="" />
 
       <nav>
         <ul>
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
-          <Link to="/aboutus">About us</Link>
+          {/* <Link to="/aboutus">About us</Link> */}
           <div>
             <Link to="/cart">Cart</Link>
             <span className="navBar-cart-span">{totalQuantity}</span>

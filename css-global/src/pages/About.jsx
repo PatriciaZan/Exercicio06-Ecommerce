@@ -33,22 +33,42 @@ export default function About() {
   return (
     <div className="about-container">
       {/* Left */}
-      <div>
-        <img src={recivedData.image} alt={recivedData.image} />
+      <div className="about-left">
+        <img
+          className="about-img"
+          src={recivedData.imageUrl}
+          alt={recivedData.image}
+        />
+        <p>{recivedData.elements}</p>
+        <p>{recivedData.status}</p>
+        <p>ratings: {recivedData.rating}</p>
+        <p></p>
       </div>
 
       {/* Right */}
       <div>
-        <span>More About</span>
-        <h1>{recivedData.name}</h1>
-        <p>{recivedData.about}</p>
+        <span className="about-span">More About</span>
+        <h1 className="about-h1">{recivedData.name}</h1>
+        <div className="about-info">
+          <span>{recivedData.location}</span>
+          <span>{recivedData.coordinate}</span>
+        </div>
+        <p>"{recivedData.meaning}"</p>
+        <p>{recivedData.size}</p>
+        <p className="about-ptext">{recivedData.about}</p>
 
-        {/* <button>Add Cart</button> */}
         <div>
-          <button onClick={handleDecreaseQuantity}>-</button>
+          <p>Request more Stars of the same type</p>
+          <button className="about-btns" onClick={handleDecreaseQuantity}>
+            -
+          </button>
           <span>{quantity}</span>
-          <button onClick={handleIncreaseQuantity}>+</button>
-          <button onClick={handleAddCart}>Add Cart</button>
+          <button className="about-btns" onClick={handleIncreaseQuantity}>
+            +
+          </button>
+          <button className="about-btns" onClick={handleAddCart}>
+            Reserve Star
+          </button>
         </div>
       </div>
     </div>
