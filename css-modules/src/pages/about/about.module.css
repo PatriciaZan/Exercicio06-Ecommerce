@@ -1,0 +1,49 @@
+/* ABOUT -------------------------------------------------*/
+.container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px 200px;
+}
+
+#dark .container {
+  color: var(--clr-text-primary-dark);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.img {
+  width: 500px;
+}
+
+.span {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.h1 {
+  font-size: 6.25rem;
+  font-weight: bolder;
+}
+
+.info {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+.ptext {
+  margin: 50px 0 100px;
+  font-size: 1rem;
+}
+
+.btns {
+  font-size: 1.5rem;
+}

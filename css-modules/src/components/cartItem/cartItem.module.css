@@ -1,0 +1,20 @@
+/* CART --------------------------------------------------------- */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+#dark .container {
+  border-bottom: 1px solid white;
+}
+
+.img {
+  width: 40px;
+}
+
+#dark .container {
+  color: var(--clr-text-primary-dark);
+}

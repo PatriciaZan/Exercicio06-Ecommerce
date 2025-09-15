@@ -1,0 +1,37 @@
+/* NAV BAR */
+.navBar {
+  position: relative;
+  z-index: 1000;
+  background-color: transparent;
+  color: var(--clr-text-primary);
+  padding: 10px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 90px;
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.a {
+  font-size: 1.5em;
+  color: var(--clr-text-primary);
+  text-decoration: none;
+}
+
+.span {
+  color: var(--clr-text-tertiary);
+  font-weight: 700;
+}
+
+#dark .container {
+  color: white;
+}
