@@ -10,7 +10,7 @@
       "size": "5 times the diameter of our Sun",
       "location": "Constellaton os Weaver's Loom",
       "coordinate": "+91234º 7583' 20''",
-      "price": 1,
+      "price": 10000,
       "rating": 9,
       "status": "New Star"
     },
@@ -24,7 +24,7 @@
       "size": "1.2 times the size of the Sun",
       "location": "Constellation of the Silent Guardian",
       "coordinate": "+1º 7462' 10''",
-      "price": 1,
+      "price": 17333,
       "rating": 8,
       "status": "Rarity"
     },
@@ -38,7 +38,7 @@
       "size": "2.5 times the size of the Sun",
       "location": "Constellation of the Forger.",
       "coordinate": "+1933º 2' 87''",
-      "price": 1,
+      "price": 12977,
       "rating": 9,
       "status": "Book Travel"
     },
@@ -52,7 +52,7 @@
       "size": "0.7 times the size of the Sun",
       "location": "Nebula of the Crystalline Serpent.",
       "coordinate": "+1005º 1285' 1245''",
-      "price": 1,
+      "price": 19088,
       "rating": 9,
       "status": "Sold"
     },
@@ -66,7 +66,7 @@
       "size": "1.5 times the size of the Sun",
       "location": "Constellation of the Lost Orion",
       "coordinate": "+25º 15' 40''",
-      "price": 1,
+      "price": 2501,
       "rating": 10,
       "status": "Book Travel"
     },
@@ -80,9 +80,9 @@
       "size": " The main core is 4 times the diameter of our Sun, but the entire 'spore' can extend for several light-years.",
       "location": "Center of the super-nebula 'Cosmic Nersery'",
       "coordinate": "+54º 25' 4000''",
-      "price": 1,
+      "price": 10000,
       "rating": 10,
-      "status": "Brarity"
+      "status": "Rarity"
     }
   ]
 }

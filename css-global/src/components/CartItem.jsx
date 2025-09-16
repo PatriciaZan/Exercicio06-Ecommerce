@@ -46,7 +46,7 @@ export default function CartItem(props) {
       <img className="cart-img" src={detail.imageUrl} alt={detail.image} />
       <p>{detail.name}</p>
       <p>Star Quantity {quantity}</p>
-      <p>Aproximated Price {detail.price * quantity}</p>
+      <p>Aproximated Price @ {detail.price * quantity} solar credits</p>
       <div className="cartItem-btns">
         <button onClick={handleReduceQuantity}>-</button>
         <span>{quantity}</span>

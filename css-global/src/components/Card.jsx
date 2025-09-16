@@ -40,7 +40,7 @@ export default function Card({ data }) {
           <p>{data.about}</p>
           <div>
             <button onClick={handleAbout}>Know more</button>
-            <button onClick={handleAddToCart}>Add Cart</button>
+            <button onClick={handleAddToCart}>Add To Cart</button>
           </div>
         </div>
       </div>

@@ -37,11 +37,19 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {/* <div className="app" data-theme={theme}> */}
-      <Div id={theme}>
-        <NavBar toggle={toggleTheme} />
+      {theme === "dark" ? (
+        <DivDark>
+          <NavBar toggle={toggleTheme} />
 
-        <Outlet />
-      </Div>
+          <Outlet />
+        </DivDark>
+      ) : (
+        <Div id={theme}>
+          <NavBar toggle={toggleTheme} />
+
+          <Outlet />
+        </Div>
+      )}
     </ThemeContext.Provider>
   );
 }
@@ -49,6 +57,13 @@ function App() {
 export default App;
 
 const Div = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
+const DivDark = styled.div`
+  background-color: black;
+  color: white;
   width: 100vw;
   height: 100vh;
 `;

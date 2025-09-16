@@ -4,15 +4,15 @@ import React, { Suspense } from "react";
 import "./index.css";
 import App from "./App.jsx";
 
-//import Cart from "./pages/Cart.jsx";
-//import Home from "./pages/Home.jsx";
-//import Products from "./pages/Products.jsx";
-//import About from "./pages/About.jsx";
+import Cart from "./pages/Cart.jsx";
+import Home from "./pages/Home.jsx";
+import Products from "./pages/Products.jsx";
+import About from "./pages/About.jsx";
 
-const Cart = React.lazy(() => import("./pages/Cart.jsx"));
-const Home = React.lazy(() => import("./pages/Home.jsx"));
-const Products = React.lazy(() => import("./pages/Products.jsx"));
-const About = React.lazy(() => import("./pages/About.jsx"));
+// const Cart = React.lazy(() => import("./pages/Cart.jsx"));
+// const Home = React.lazy(() => import("./pages/Home.jsx"));
+// const Products = React.lazy(() => import("./pages/Products.jsx"));
+// const About = React.lazy(() => import("./pages/About.jsx"));
 
 import { Provider } from "react-redux";
 import { store } from "./stores";

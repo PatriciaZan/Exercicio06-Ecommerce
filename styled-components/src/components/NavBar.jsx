@@ -31,7 +31,7 @@ export default function NavBar({ toggle }) {
           </div>
 
           <div>
-            <button onClick={toggle}>toggle</button>
+            <Button onClick={toggle}>toggle</Button>
           </div>
         </ul>
       </nav>
@@ -70,4 +70,17 @@ const Container = styled.div`
 const Span = styled.span`
   color: var(--clr-text-tertiary);
   font-weight: 700;
+`;
+
+const Button = styled.button`
+  background-color: #217aff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #448efdff;
+  }
 `;

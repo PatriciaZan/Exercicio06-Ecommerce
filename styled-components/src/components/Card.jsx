@@ -41,8 +41,8 @@ export default function Card({ data }) {
           <img className="card-image" src={data.imageUrl} alt={data.name} />
           <p>{data.about}</p>
           <div>
-            <button onClick={handleAbout}>Know more</button>
-            <button onClick={handleAddToCart}>Add Cart</button>
+            <Button onClick={handleAbout}>Know more</Button>
+            <Button onClick={handleAddToCart}>Add Cart</Button>
           </div>
         </Content>
       </Tags>
@@ -91,9 +91,23 @@ const Content = styled.div`
 
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--clr-background);
+  background-color: gray;
 
   img {
     width: 100px;
+  }
+`;
+
+const Button = styled.button`
+  background-color: #217aff;
+  font-weight: 700;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #448efdff;
   }
 `;

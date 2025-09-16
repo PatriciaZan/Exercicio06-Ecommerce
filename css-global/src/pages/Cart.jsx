@@ -7,7 +7,7 @@ export default function Cart() {
 
   return (
     <div className="cart-container">
-      <h2>Cart</h2>
+      <h2>Your requested Stars</h2>
       <div className="cart-items">
         {carts.map((item, key) => (
           <CartItem key={key} data={item} />
