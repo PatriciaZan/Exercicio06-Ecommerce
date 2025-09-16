@@ -1,0 +1,37 @@
+#dark .navBar-container {
+  color: white;
+}
+/* CARD PRODUCTS ---------------------------------------------------*/
+
+#dark .card-container {
+  background: #217aff;
+  background: linear-gradient(
+    180deg,
+    rgba(33, 122, 255, 1) 0%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+.card-container span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-text-white);
+}
+
+#dark .card-container span {
+  color: var(--clr-text-black);
+}
+
+#dark .card-content {
+  background-color: var(--clr-background-dark);
+}
+
+/* CART --------------------------------------------------------- */
+
+#dark .cartItem-container {
+  border-bottom: 1px solid white;
+}
+
+#dark .cartItem-container {
+  color: var(--clr-text-primary-dark);
+}

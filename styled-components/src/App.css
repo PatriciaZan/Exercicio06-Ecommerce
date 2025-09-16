@@ -1,0 +1,31 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#light {
+  background-color: var(--clr-background);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(153, 153, 153, 1) 100%
+  );
+}
+
+#dark {
+  background-color: black;
+}
+
+button {
+  background-color: var(--clr-btn-primary);
+  font-weight: 700;
+  color: var(--clr-text-secondary);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--clr-btn-hover);
+}
