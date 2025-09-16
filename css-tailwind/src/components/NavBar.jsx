@@ -15,21 +15,43 @@ export default function NavBar({ toggle }) {
   }, [carts]);
 
   return (
-    <div className="navBar-container">
-      <img src={logo} alt="" />
+    <div className="relative z-[1000] bg-transparent p-[10px] font-extralight flex items-center justify-between">
+      <img className="w-[90px]" src={logo} alt="" />
 
       <nav>
-        <ul>
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
+        <ul className="flex items-center gap-[30px]">
+          <Link
+            className="text-[1.5em] text-[var(--clr-text-primary)] no-underline"
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="text-[1.5em] text-[var(--clr-text-primary)] no-underline"
+            to="/products"
+          >
+            Products
+          </Link>
           {/* <Link to="/aboutus">About us</Link> */}
           <div>
-            <Link to="/cart">Cart</Link>
-            <span className="navBar-cart-span">{totalQuantity}</span>
+            <Link
+              className="text-[1.5em] text-[var(--clr-text-primary)] no-underline"
+              to="/cart"
+            >
+              Cart
+            </Link>
+            <span className="text-[var(--clr-text-tertiary)] font-bold">
+              {totalQuantity}
+            </span>
           </div>
 
           <div>
-            <button onClick={toggle}>toggle</button>
+            <button
+              className="text-2xl bg-gray-400 text-white border-none py-2.5 px-4 rounded-[5px] cursor-pointer hover:bg-gray-700"
+              onClick={toggle}
+            >
+              toggle
+            </button>
           </div>
         </ul>
       </nav>

@@ -13,7 +13,7 @@ export default function App() {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    setTheme((curr) => (curr === "" ? "dark" : ""));
   };
 
   const getLocalTheme = () => {
@@ -35,7 +35,11 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {/* <div className="app" data-theme={theme}> */}
-      <div className="bg-white dark:bg-black dark:text-white" id={theme}>
+      <div
+        className={`${
+          theme === "dark" ? "dark:bg-black dark:text-white" : "bg-white"
+        } w-screen h-screen `}
+      >
         <NavBar toggle={toggleTheme} />
 
         <Outlet />

@@ -37,13 +37,14 @@ export default function CartItem(props) {
   };
 
   return (
-    <div className="cartItem-container">
+    <div className="flex items-center gap-10 p-5 border-b border-black">
       Cart Item
-      <img className="cart-img" src={detail.imageUrl} alt={detail.image} />
+      <img className="w-10" src={detail.imageUrl} alt={detail.image} />
       <p>{detail.name}</p>
       <p>Star Quantity {quantity}</p>
-      <p>Aproximated Price {detail.price * quantity}</p>
-      <div className="cartItem-btns">
+      <p>Price Only by consult!</p>
+      {/* <p>Price Only by consult {detail.price * quantity}</p> */}
+      <div className="border-l border-black pl-5 flex items-center gap-5">
         <button onClick={handleReduceQuantity}>-</button>
         <span>{quantity}</span>
         <button onClick={handleIncreaseQuantity}>+</button>

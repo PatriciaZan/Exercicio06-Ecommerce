@@ -39,29 +39,33 @@ export default function Products() {
 
   if (loading)
     return (
-      <div className="products-container">
+      <div className="flex flex-col items-center text-center w-screen h-full">
         <LazyloadindProducts products={dataLenght} />
       </div>
     );
 
   if (error)
     return (
-      <div className="products-container">
+      <div className="flex flex-col items-center text-center w-screen">
         <p>Error: {error.message}</p>
       </div>
     );
 
   return (
-    <div className="products-container">
-      <div className="products-header">
-        <h1>Our Stars and Suns </h1>
+    <div className="flex flex-col items-center text-center h-full">
+      <div className="mt-5 mb-[30px]">
+        <h1 className="text-4xl">Our Stars and Suns </h1>
         <p>
           The best available sales right now. Make a reservation or contact our
           selesman team for a personalized visit.
         </p>
       </div>
 
-      <div className="products-grid">
+      <div
+        className=" gap-x-12 gap-y-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+      
+      "
+      >
         {data.map((item) => (
           <Card key={item.id} data={item} />
         ))}
